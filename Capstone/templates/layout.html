@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>MyFlaskApp</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>
+
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: scroll;
+}
+ .main{
+	 min-height: 100%;
+	 position: relative;
+ }
+.footer {
+background-color: #050c24;
+height: 50px;
+text-align: center;
+bottom: 0px;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+position: absolute;
+color: white;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  height: auto;
+}
+
+/* .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+} */
+
+</style>
+</head>
+
+<body>
+<div class="main">
+
+
+	{% include 'includes/_navbar.html' %}
+	<div class="container">
+		{% include 'includes/_messages.html' %}
+		{% block body %} {% endblock %}
+
+
+		</div>
+		<!-- <div class="footer">
+			<p> @2020 All Copy Rights Recrived</p>
+	</div> -->
+
+</div>
+<!-- <div class="footer">
+	<p> @2020 All Copy Rights Recrived</p>
+</div> -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type=text/javascript> $SCRIPT_ROOT={{ request.script_root|tojson|safe }}; </script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body></html>
